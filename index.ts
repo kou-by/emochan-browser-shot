@@ -2,7 +2,7 @@ import core from 'puppeteer-core';
 import chromium from 'chrome-aws-lambda';
 
 const exePath = ((p: NodeJS.Platform) => {
-  if (p === 'linux') return '/usr/bin/google-chrome';
+  if (p === 'linux') return '/usr/bin/google-chrome-stable';
   if (p === 'win32') return 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe';
 
   return '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
@@ -17,7 +17,7 @@ export async function launchBrowser(): Promise<core.Browser> {
     })
   } catch (_) {
     return await core.launch({
-      args: [],
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
       executablePath: exePath,
       headless: true
     })

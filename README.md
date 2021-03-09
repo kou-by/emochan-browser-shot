@@ -1,5 +1,7 @@
 # emochan browser shot
 
+[![CI](https://github.com/kou-by/emochan-browser-shot/actions/workflows/ci.yml/badge.svg)](https://github.com/kou-by/emochan-browser-shot/actions/workflows/ci.yml)
+
 generate dynamic images via chrome-aws-lambda
 
 ## Usage
