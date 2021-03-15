@@ -14,9 +14,9 @@ generate dynamic images via chrome-aws-lambda
 ## Usage
 
 ```ts
-import { getScreenShot } from 'emochan-browser-shot';
+import { getScreenshot } from 'emochan-browser-shot';
 
-const capture = await getScreenShot(htmlString, {
+const capture = await getScreenshot(htmlString, {
   width: 1920,
   height: 1008,
   deviceScaleFactor: 1,

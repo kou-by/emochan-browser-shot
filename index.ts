@@ -23,8 +23,14 @@ export async function launchBrowser(): Promise<core.Browser> {
     })
   }
 }
-
+/**
+ * @deprecated please use getScreenshot()
+ */
 export async function getScreenShot(html: string, viewport: core.Viewport): Promise<string | void | Buffer> {
+  return getScreenshot(html, viewport);
+}
+
+export async function getScreenshot(html: string, viewport: core.Viewport): Promise<string | void | Buffer> {
   const browser = await launchBrowser();
 
   try {
