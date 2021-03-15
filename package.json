@@ -23,6 +23,7 @@
   "homepage": "https://github.com/kou-by/html-to-screenshot#readme",
   "dependencies": {
     "chrome-aws-lambda": "^7.0.0",
+    "lookpath": "^1.2.0",
     "puppeteer-core": "^8.0.0"
   },
   "devDependencies": {
