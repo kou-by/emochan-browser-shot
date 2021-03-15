@@ -1,15 +1,15 @@
 import path from 'path';
 import { promises as fs } from 'fs';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
-import { getScreenShot } from '../';
+import { getScreenshot } from '../index';
 
 expect.extend({ toMatchImageSnapshot });
 
-describe('.getScreenShot()', (): void => {
+describe('.getScreenshot()', (): void => {
   it('generates an image from HTML/CSS', async (): Promise<void> => {
     const htmlString = await fs.readFile(path.resolve(__dirname, './index.html'), 'utf-8');
 
-    const imageData = await getScreenShot(htmlString, {
+    const imageData = await getScreenshot(htmlString, {
       width: 375,
       height: 640,
       deviceScaleFactor: 1,
